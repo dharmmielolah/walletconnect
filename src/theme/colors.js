@@ -1,0 +1,13 @@
+export default {
+  WHITE: "#F9FAFB",
+  PRIMARY: "#3B99FC",
+  PRIMARY_TRANSPARENT: "rgba(59, 153, 252, 0.1)",
+  TEXT_01: "#757886",
+  DARK_BLUE: "#023469",
+  BLACK: "#100210",
+  INPUT: "#F1F1F3",
+  TAG: "#DEDEE3",
+  BORDER: "#EAEDF5",
+  RED: "#F6465D",
+  GREEN: "#13D1AF"
+};

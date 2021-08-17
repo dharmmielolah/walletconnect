@@ -1,0 +1,8 @@
+const ROUTES = {
+  WELCOME: "WELCOME",
+  CONNECT: "CONNECT",
+  IMPORTWALLET: "IMPORTWALLET",
+  RANKING: "RANKING"
+};
+
+export default ROUTES;
