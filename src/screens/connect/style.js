@@ -56,7 +56,7 @@ export default StyleSheet.create({
     width: "100%",
     height: RF(311),
     padding: RF(24),
-    backgroundColor: Colors.WHITE,
+    backgroundColor: "#FFF",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,

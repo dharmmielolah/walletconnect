@@ -7,7 +7,7 @@ import Colors from "../theme/colors";
 export default ({ tabs, children, initialIndex }) => {
   const [activeTab, setActiveTab] = useState(initialIndex);
   return (
-    <View>
+    <>
       <View style={Style.container}>
         {tabs.map((tab, index) => {
           return (
@@ -21,8 +21,8 @@ export default ({ tabs, children, initialIndex }) => {
           );
         })}
       </View>
-      <View style={Style.tabContentContainer}>{children(activeTab)}</View>
-    </View>
+      {children(activeTab)}
+    </>
   );
 };
 
@@ -37,7 +37,6 @@ export const Style = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center"
   },
-  tabContentContainer: {},
   activeTabButton: {
     flex: 1,
     height: RF(40),

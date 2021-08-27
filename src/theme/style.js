@@ -38,6 +38,11 @@ export default StyleSheet.create({
     flexDirection: "row",
     alignItems: "center"
   },
+  flexCenter: {
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center"
+  },
   headerBack: {
     width: RF(36),
     height: RF(36),

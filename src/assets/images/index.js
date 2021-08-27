@@ -15,8 +15,11 @@ import QR from "./qr.png";
 import Back from "./back.png";
 import BackHome from "./backhome.png";
 import Pattern from "./pattern.png";
+import Exit from "./exit.png";
+import Error from "./error.png";
 
 export {
+  Error,
   Pattern,
   BackHome,
   Back,
@@ -33,5 +36,6 @@ export {
   Onto,
   TokenPocket,
   MathWallet,
-  BitPay
+  BitPay,
+  Exit
 };

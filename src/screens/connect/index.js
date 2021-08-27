@@ -9,6 +9,8 @@ import Tab from "../../components/tab";
 import ROUTES from "../../navigation/routes";
 import { WALLETSMOCK } from "./__mock__/wallets";
 import navigation from "../../navigation/service";
+import Button from "../../components/button";
+import Message from "../../components/message";
 
 function Wallet() {
   return (
@@ -32,7 +34,7 @@ function Wallet() {
           );
         })}
       </View>
-      <View style={{ paddingBottom: RF(100) }} />
+      <View style={{ height: RF(400) }} />
     </ScrollView>
   );
 }
@@ -50,19 +52,28 @@ function QRCode() {
 
 function WalletConnect() {
   return (
-    <View style={[Styles.container]}>
-      <View style={BaseStyle.header01}>
-        <Image source={Logo} style={Styles.logo} />
+    <>
+      <View style={[Styles.container]}>
+        <View style={BaseStyle.header01}>
+          <Image source={Logo} style={Styles.logo} />
+        </View>
+        <Tab tabs={["Wallets", "QR Code"]} initialIndex={0}>
+          {activeTab => (
+            <>
+              {activeTab === 0 ? <Wallet /> : null}
+              {activeTab === 1 ? <QRCode /> : null}
+            </>
+          )}
+        </Tab>
       </View>
-      <Tab tabs={["Wallets", "QR Code"]} initialIndex={0}>
-        {activeTab => (
-          <>
-            {activeTab === 0 ? <Wallet /> : null}
-            {activeTab === 1 ? <QRCode /> : null}
-          </>
-        )}
-      </Tab>
-    </View>
+      <Message
+        visible={true}
+        type="error"
+        title="Error Message"
+        message="We encountered an unknown error an couldn’t process your request to link your wallet app. Please try linking app again."
+        button={setMessageVisibleFalse => <Button onPress={setMessageVisibleFalse} text="Try again" />}
+      />
+    </>
   );
 }
 
